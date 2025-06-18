@@ -47,6 +47,7 @@
 .header__logo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 20px;
   text-transform: var(--accent-heading-transform, uppercase);
 }
