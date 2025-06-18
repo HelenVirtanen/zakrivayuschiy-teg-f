@@ -22,6 +22,8 @@
   font-variation-settings: "wght" var(--main-wght, 400);
 }
 
+
+/* Icons */
 .floppy {
   width: 39px;
   height: 39px;
@@ -32,6 +34,7 @@
   height: 24px;
 }
 
+
 .content-section {
   display: flex;
   flex-direction: column;
@@ -39,6 +42,7 @@
   inline-size: clamp(375px, 100%, 700px);
 }
 
+/* Header */
 .header {
   align-items: center;
   row-gap: 25px;
@@ -71,9 +75,13 @@
   );
 }
 
+
+/* Theme menu */
 .header__theme-menu {
   display: none;
 }
+
+/* Cards list */
 
 .cards-list {
   display: flex;
@@ -81,6 +89,7 @@
   row-gap: 50px;
 }
 
+/* Card */
 .card__title {
   border: var(--border, 2px solid #000);
   border-block-end: none;
@@ -115,6 +124,7 @@
   line-height: 1.16;
 }
 
+/* Buttons */ 
 .like__buttons {
   display: flex;
   align-self: flex-end;
@@ -155,10 +165,12 @@
   height: 28px;
 }
 
+/* Footer */ 
 .footer {
   padding: 50px 0 100px;
 }
 
+/* Adaptive */
 @media (width >= 480px) {
   .post__paragraph {
     max-width: 100%;
