@@ -5,4 +5,14 @@
     --heading-wght: 700;
     --main-wght: 400;
     --main-font-size: 18px;
+    --accent-heading-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --accent-subheading-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --accent-heading-transform: uppercase;
+
+    --background-color: #fff;
+    --text-color: #000;
+    --border-color: #000;
+
+    --header-padding: clamp(120px, 10vw, 128px) clamp(14px, 5vw, 120.5px); 
+    --header-margin: 100px auto;
 }
