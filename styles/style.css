@@ -14,3 +14,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+.floppy {
+  width: 39px;
+  height: 39px;
+}
