@@ -97,6 +97,8 @@
 
 .card__illustration {
   position: relative;
+  border: var(--border, 2px solid #000);
+  border-block-end: none;
 }
 
 .card__label {
@@ -108,7 +110,6 @@
   font-family: var(--accent-font, "PressStart2P");
   font-size: var(--label-font-size, 14px);
   line-height: 1;
-  text-transform: var(--accent-heading-transform, uppercase);
   text-shadow: 1px 0 var(--stroke-color, #fff), -1px 0 var(--stroke-color, #fff),
     0 1px var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff),
     1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
@@ -133,19 +134,20 @@
   flex-direction: column;
   gap: 25px;
   border: var(--border, 2px solid #000);
-  border-block-start: none;
   padding: var(--post-info-padding, 25px);
+}
+
+.cards-list__item:nth-child(1) .card__info,
+.cards-list__item:nth-child(5) .card__info,
+.cards-list__item:nth-child(8) .card__info {
+  border-block-start: none;
 }
 
 .card__description {
   display: flex;
   flex-direction: column;
   gap: 27px;
-}
-
-.card__paragraph {
-  max-width: 290px;
-  line-height: 1.16;
+  line-height: 1.17;
 }
 
 /* Buttons */
@@ -162,7 +164,7 @@
 
 .card__like-button {
   border: var(--border, 2px solid #000);
-  padding: var(--button-like-padding, 7.5px 36px);
+  padding: var(--button-like-padding, 6.5px 36px);
   background-color: var(--background-color, #fff);
 }
 
@@ -177,6 +179,7 @@
 .save__button {
   display: flex;
   flex-direction: column;
+  align-self: center;
   align-items: center;
   row-gap: 8px;
   border: var(--border, 2px solid #000);
@@ -196,10 +199,6 @@
 
 /* Adaptive */
 @media (width >= 480px) {
-  .post__paragraph {
-    max-width: 100%;
-  }
-
   .card__label {
     --label-right: 25px;
   }
@@ -212,7 +211,6 @@
   .save__button {
     flex-direction: row;
     justify-content: center;
-    align-self: center;
     column-gap: 8px;
   }
 }
