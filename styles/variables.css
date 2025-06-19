@@ -8,6 +8,7 @@
     --post-title-size: 18px;
     --label-font-size: 14px;
     --button-font-size: 14px;
+    --dialog-font-size: 14px;
     --accent-heading-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --accent-subheading-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     --accent-heading-transform: uppercase;
@@ -26,7 +27,10 @@
     --button-like-padding: 6.5px 36px;
     --button-heart-padding: 6px 12px 3px;
     --button-save-padding: 15px 20px;
+    --button-ok-padding: 10.5px 112.5px;
 
     --label-top: 25px;
     --label-right: 13px;
+
+    --dialog-padding: 30px 40px;
 }

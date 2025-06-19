@@ -138,8 +138,7 @@
 }
 
 .cards-list__item:nth-child(1) .card__info,
-.cards-list__item:nth-child(5) .card__info,
-.cards-list__item:nth-child(8) .card__info {
+.cards-list__item:nth-child(5) .card__info {
   border-block-start: none;
 }
 
@@ -151,21 +150,10 @@
 }
 
 /* Buttons */
-.like__buttons {
-  display: flex;
-  align-self: flex-end;
-}
-
-.card__icon-button {
-  border: none;
-  padding: var(--button-heart-padding, 6px 12px 3px);
+.button {
   background-color: var(--background-color, #fff);
-}
-
-.card__like-button {
   border: var(--border, 2px solid #000);
-  padding: var(--button-like-padding, 6.5px 36px);
-  background-color: var(--background-color, #fff);
+  cursor: pointer;
 }
 
 .button__text {
@@ -176,15 +164,27 @@
   line-height: 0.9;
 }
 
+.like__buttons {
+  display: flex;
+  align-self: flex-end;
+}
+
+.card__icon-button {
+  border: none;
+  padding: var(--button-heart-padding, 6px 12px 3px);
+}
+
+.card__like-button {
+  padding: var(--button-like-padding, 6.5px 36px);
+}
+
 .save__button {
   display: flex;
   flex-direction: column;
   align-self: center;
   align-items: center;
   row-gap: 8px;
-  border: var(--border, 2px solid #000);
   padding: var(--button-save-padding, 15px 20px);
-  background-color: var(--background-color, #fff);
 }
 
 .save__button .floppy {
@@ -196,6 +196,59 @@
 .footer {
   padding: 50px 0 100px;
 }
+
+/* Dialog */
+.dialog-save {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  border: var(--border, 2px solid #000);
+  transition: opacity 0.3s ease-in-out;
+  font-family: var(--accent-font, "PressStart2P");
+  padding: var(--dialog-padding, 30px 40px);
+  max-inline-size: clamp(341px, calc(100vw - 34px), 353px);
+}
+
+.dialog-save[opened] {
+  display: block;
+}
+
+.dialog-save:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog__header {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.dialog-save .floppy {
+  min-width: 39px;
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__title {
+  font-size: var(--dialog-font-size, 14px);
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: var(--accent-heading-transform, uppercase);
+}
+
+.dialog__button-ok {
+  display: flex;
+  align-self: center;
+  text-transform: var(--accent-heading-transform, uppercase);
+  padding: var(--button-ok-padding, 10.5px 112.5px);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+} 
 
 /* Adaptive */
 @media (width >= 480px) {
@@ -212,5 +265,9 @@
     flex-direction: row;
     justify-content: center;
     column-gap: 8px;
+  }
+
+  .dialog {
+    --dialog-padding: 30px;
   }
 }
