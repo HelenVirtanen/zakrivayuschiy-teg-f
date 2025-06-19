@@ -6,6 +6,7 @@
     --main-wght: 400;
     --main-font-size: 18px;
     --post-title-size: 18px;
+    --label-font-size: 14px;
     --button-font-size: 14px;
     --accent-heading-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     --accent-subheading-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
@@ -13,6 +14,7 @@
 
     --background-color: #fff;
     --text-color: #000;
+    --stroke-color: #fff;
     --border-color: #000;
     --border: 2px solid var(--border-color);
 
@@ -24,4 +26,7 @@
     --button-like-padding: 7.5px 36px;
     --button-heart-padding: 6px 12px 3px;
     --button-save-padding: 15px 20px;
+
+    --label-top: 25px;
+    --label-right: 13px;
 }

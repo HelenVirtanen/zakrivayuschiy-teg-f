@@ -22,7 +22,6 @@
   font-variation-settings: "wght" var(--main-wght, 400);
 }
 
-
 /* Icons */
 .floppy {
   width: 39px;
@@ -33,7 +32,6 @@
   width: 27px;
   height: 24px;
 }
-
 
 .content-section {
   display: flex;
@@ -75,7 +73,6 @@
   );
 }
 
-
 /* Theme menu */
 .header__theme-menu {
   display: none;
@@ -96,6 +93,33 @@
   padding: 4px 10px 6px;
   font-size: var(--post-title-size, 18px);
   font-variation-settings: "wght" var(--heading-wght, 700);
+}
+
+.card__illustration {
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  top: var(--label-top, 25px);
+  right: var(--label-right, 13px);
+  opacity: 0.5;
+  color: var(--text-color, #000);
+  font-family: var(--accent-font, "PressStart2P");
+  font-size: var(--label-font-size, 14px);
+  line-height: 1;
+  text-transform: var(--accent-heading-transform, uppercase);
+  text-shadow: 1px 0 var(--stroke-color, #fff), -1px 0 var(--stroke-color, #fff),
+    0 1px var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff),
+    1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
+    1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--stroke-color, #fff);
+  }
 }
 
 .card__image {
@@ -124,7 +148,7 @@
   line-height: 1.16;
 }
 
-/* Buttons */ 
+/* Buttons */
 .like__buttons {
   display: flex;
   align-self: flex-end;
@@ -165,7 +189,7 @@
   height: 28px;
 }
 
-/* Footer */ 
+/* Footer */
 .footer {
   padding: 50px 0 100px;
 }
@@ -176,9 +200,19 @@
     max-width: 100%;
   }
 
+  .card__label {
+    --label-right: 25px;
+  }
+
+  .save__button .floppy {
+  width: 21px;
+  height: 21px;
+}
+
   .save__button {
-  flex-direction: row;
-  justify-content: center;
-  row-gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    column-gap: 8px;
   }
 }
