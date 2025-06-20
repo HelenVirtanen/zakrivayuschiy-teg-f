@@ -115,6 +115,7 @@
     1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
     1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 
 @supports (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
@@ -249,6 +250,40 @@
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
+
+/* Filters */
+.contrast-filter {
+  filter: contrast(120%);
+}
+
+.less-saturate-filter {
+  filter: saturate(90%);
+}
+
+.contrast-sepia-filter {
+  filter: contrast(150%) sepia(65%);
+}
+
+.blur-filter {
+  filter: blur(0.1rem);
+}
+
+.bright-filter {
+  filter: brightness(120%);
+}
+
+.hue-filter {
+  filter: hue-rotate(180deg)
+}
+
+.grayscale-filter {
+  filter: grayscale(0.7);
+}
+
+.bright-contrast-filter {
+  filter: brightness(110%) contrast(120%);
+}
+
 
 /* Adaptive */
 @media (width >= 480px) {
