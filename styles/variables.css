@@ -1,12 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* typography */
   --main-font: "Inter", system-ui, -apple-system, Roboto, Helvetica, Arial,
     sans-serif;
   --accent-font: "PressStart2P", cursive;
   --heading-wght: 700;
   --main-wght: 400;
   --main-font-size: 18px;
-  --post-title-size: 18px;
+  --card-title-size: 18px;
   --label-font-size: 14px;
   --button-font-size: 14px;
   --dialog-font-size: 14px;
@@ -17,7 +18,8 @@
     1.4375rem
   );
   --accent-heading-transform: uppercase;
-
+  
+  /* background image */
   --background-image: repeating-linear-gradient(
       90deg,
       #d3d3d3 0,
@@ -34,26 +36,32 @@
     ),
     linear-gradient(180deg, #e7e7e7 0, #e7e7e7 0.01%, #1a1a1a 100%);
 
+  /* palette */
   --background-color: #fff;
   --text-color: #000;
   --stroke-color: #fff;
   --border-color: #000;
+
+  /* box spacing */
   --border: 2px solid var(--border-color);
 
   --header-padding: clamp(120px, 10vw, 128px) clamp(14px, 5vw, 120.5px);
   --header-margin: 100px auto;
 
-  --post-info-padding: 25px;
+  --card-info-padding: 25px;
+  --card-title-padding: 4px 10px 6px;
 
   --button-like-padding: 6.5px 36px;
   --button-heart-padding: 6px 12px 3px;
   --button-save-padding: 15px 20px;
   --button-ok-padding: 10.5px 112.5px;
-
+  
+  --dialog-padding: 30px 40px;
+  
+  /* label position */ 
   --label-top: 25px;
   --label-right: 13px;
 
+  /* svg size */
   --floppy-size: 39px;
-
-  --dialog-padding: 30px 40px;
 }

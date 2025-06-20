@@ -115,8 +115,8 @@
 .card__title {
   border: var(--border, 2px solid #000);
   border-block-end: none;
-  padding: 4px 10px 6px;
-  font-size: var(--post-title-size, 18px);
+  padding: var(--card-title-padding, 4px 10px 6px);
+  font-size: var(--card-title-size, 18px);
   font-variation-settings: "wght" var(--heading-wght, 700);
 }
 
@@ -164,7 +164,7 @@
   flex-direction: column;
   gap: 25px;
   border: var(--border, 2px solid #000);
-  padding: var(--post-info-padding, 25px);
+  padding: var(--card-info-padding, 25px);
 }
 
 .cards-list__item:nth-child(1) .card__info,
