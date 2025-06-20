@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  inline-size: clamp(375px, 100%, 700px);
+  inline-size: clamp(320px, 100%, 700px);
 }
 
 /* Header */
@@ -154,8 +154,8 @@
 
 /* Buttons */
 .button {
-  background-color: var(--background-color, #fff);
   border: var(--border, 2px solid #000);
+  background-color: var(--background-color, #fff);
   cursor: pointer;
 }
 
@@ -184,9 +184,9 @@
 .save__button {
   display: flex;
   flex-direction: column;
-  align-self: center;
   align-items: center;
   gap: 8px;
+  align-self: center;
   padding: var(--button-save-padding, 15px 20px);
 }
 
@@ -207,10 +207,10 @@
   flex-direction: column;
   row-gap: 30px;
   border: var(--border, 2px solid #000);
-  transition: opacity 0.3s ease-in-out;
-  font-family: var(--accent-font, "PressStart2P");
   padding: var(--dialog-padding, 30px 40px);
-  max-inline-size: clamp(341px, calc(100vw - 34px), 353px);
+  font-family: var(--accent-font, "PressStart2P");
+  transition: opacity 0.3s ease-in-out;
+  max-inline-size: clamp(286px, calc(100vw - 34px), 353px);
 }
 
 .dialog-save[opened] {
@@ -233,8 +233,8 @@
 }
 
 .dialog__title {
-  font-size: var(--dialog-font-size, 14px);
   font-weight: 400;
+  font-size: var(--dialog-font-size, 14px);
   line-height: 1.5;
   text-transform: var(--accent-heading-transform, uppercase);
 }
@@ -242,13 +242,13 @@
 .dialog__button-ok {
   display: flex;
   align-self: center;
-  text-transform: var(--accent-heading-transform, uppercase);
   padding: var(--button-ok-padding, 10.5px 112.5px);
+  text-transform: var(--accent-heading-transform, uppercase);
 }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
 /* Adaptive */
 @media (width >= 480px) {
@@ -257,8 +257,8 @@ dialog::backdrop {
   }
 
   .save__button .floppy {
-  --floppy-size: 21px;
-}
+    --floppy-size: 21px;
+  }
 
   .save__button {
     flex-direction: row;
