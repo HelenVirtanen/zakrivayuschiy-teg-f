@@ -121,6 +121,7 @@
 @supports (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
   .card__label {
     -webkit-text-stroke: 1px var(--stroke-color, #fff);
+    text-shadow: none; 
   }
 }
 
