@@ -17,6 +17,26 @@
   font-family: var(--main-font, "Inter"), sans-serif;
   font-size: var(--main-font-size, 18px);
   background-color: var(--background-color, #fff);
+  background-image: var(
+    --background-image,
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7 0, #e7e7e7 0.01%, #1a1a1a 100%)
+  );
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-wght, 400);
@@ -49,6 +69,7 @@
   padding: var(--header-padding);
   font-family: var(--accent-font, "PressStart2P");
   text-transform: var(--accent-heading-transform, uppercase);
+  background-color: var(--background-color, #fff);
 }
 
 .header__logo {
@@ -86,6 +107,10 @@
   row-gap: 50px;
 }
 
+.cards-list__item {
+  background-color: var(--background-color, #fff);
+}
+
 /* Card */
 .card__title {
   border: var(--border, 2px solid #000);
@@ -105,6 +130,7 @@
   position: absolute;
   top: var(--label-top, 25px);
   right: var(--label-right, 13px);
+  z-index: 1;
   opacity: 0.5;
   color: var(--text-color, #000);
   font-family: var(--accent-font, "PressStart2P");
@@ -115,13 +141,12 @@
     1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
     1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
   mix-blend-mode: hard-light;
-  z-index: 1;
 }
 
 @supports (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
   .card__label {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color, #fff);
-    text-shadow: none; 
   }
 }
 
@@ -274,7 +299,7 @@ dialog::backdrop {
 }
 
 .hue-filter {
-  filter: hue-rotate(180deg)
+  filter: hue-rotate(180deg);
 }
 
 .grayscale-filter {
@@ -284,7 +309,6 @@ dialog::backdrop {
 .bright-contrast-filter {
   filter: brightness(110%) contrast(120%);
 }
-
 
 /* Adaptive */
 @media (width >= 480px) {

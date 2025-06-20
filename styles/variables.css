@@ -1,38 +1,59 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main-font: "Inter", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-    --accent-font: "PressStart2P", cursive;
-    --heading-wght: 700;
-    --main-wght: 400;
-    --main-font-size: 18px;
-    --post-title-size: 18px;
-    --label-font-size: 14px;
-    --button-font-size: 14px;
-    --dialog-font-size: 14px;
-    --accent-heading-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    --accent-subheading-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --accent-heading-transform: uppercase;
+  --main-font: "Inter", system-ui, -apple-system, Roboto, Helvetica, Arial,
+    sans-serif;
+  --accent-font: "PressStart2P", cursive;
+  --heading-wght: 700;
+  --main-wght: 400;
+  --main-font-size: 18px;
+  --post-title-size: 18px;
+  --label-font-size: 14px;
+  --button-font-size: 14px;
+  --dialog-font-size: 14px;
+  --accent-heading-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --accent-subheading-font-size: clamp(
+    0.875rem,
+    0.6769rem + 0.8451vw,
+    1.4375rem
+  );
+  --accent-heading-transform: uppercase;
 
-    --background-color: #fff;
-    --text-color: #000;
-    --stroke-color: #fff;
-    --border-color: #000;
-    --border: 2px solid var(--border-color);
+  --background-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7 0, #e7e7e7 0.01%, #1a1a1a 100%);
 
-    --header-padding: clamp(120px, 10vw, 128px) clamp(14px, 5vw, 120.5px); 
-    --header-margin: 100px auto;
+  --background-color: #fff;
+  --text-color: #000;
+  --stroke-color: #fff;
+  --border-color: #000;
+  --border: 2px solid var(--border-color);
 
-    --post-info-padding: 25px;
+  --header-padding: clamp(120px, 10vw, 128px) clamp(14px, 5vw, 120.5px);
+  --header-margin: 100px auto;
 
-    --button-like-padding: 6.5px 36px;
-    --button-heart-padding: 6px 12px 3px;
-    --button-save-padding: 15px 20px;
-    --button-ok-padding: 10.5px 112.5px;
+  --post-info-padding: 25px;
 
-    --label-top: 25px;
-    --label-right: 13px;
+  --button-like-padding: 6.5px 36px;
+  --button-heart-padding: 6px 12px 3px;
+  --button-save-padding: 15px 20px;
+  --button-ok-padding: 10.5px 112.5px;
 
-    --floppy-size: 39px;
+  --label-top: 25px;
+  --label-right: 13px;
 
-    --dialog-padding: 30px 40px;
+  --floppy-size: 39px;
+
+  --dialog-padding: 30px 40px;
 }
