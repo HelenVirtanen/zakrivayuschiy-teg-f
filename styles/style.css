@@ -24,8 +24,8 @@
 
 /* Icons */
 .floppy {
-  width: 39px;
-  height: 39px;
+  width: var(--floppy-size, 39px);
+  height: var(--floppy-size, 39px);
 }
 
 .heart {
@@ -127,6 +127,9 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .card__info {
@@ -183,13 +186,12 @@
   flex-direction: column;
   align-self: center;
   align-items: center;
-  row-gap: 8px;
+  gap: 8px;
   padding: var(--button-save-padding, 15px 20px);
 }
 
 .save__button .floppy {
-  width: 28px;
-  height: 28px;
+  --floppy-size: 28px;
 }
 
 /* Footer */
@@ -227,9 +229,7 @@
 }
 
 .dialog-save .floppy {
-  min-width: 39px;
-  width: 39px;
-  height: 39px;
+  min-width: var(--floppy-size, 39px);
 }
 
 .dialog__title {
@@ -257,14 +257,12 @@ dialog::backdrop {
   }
 
   .save__button .floppy {
-  width: 21px;
-  height: 21px;
+  --floppy-size: 21px;
 }
 
   .save__button {
     flex-direction: row;
     justify-content: center;
-    column-gap: 8px;
   }
 
   .dialog {
