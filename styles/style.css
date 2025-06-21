@@ -191,6 +191,10 @@
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button__text {
   margin: 0;
   padding: 0;
@@ -205,16 +209,18 @@
 .like__buttons {
   display: flex;
   align-self: flex-end;
+  gap: 6px;
 }
 
 .card__icon-button {
-  border: none;
-  padding: var(--button-heart-padding, 6px 12px 3px);
+  border: 2px solid transparent;
+  padding: var(--button-heart-padding, 6px 4px 2px);
+  transition: border 0.3s ease;
 }
 
 .card__like-button {
   position: relative;
-  padding: var(--button-like-padding, 6.5px 36px);
+  padding: var(--button-like-padding, 6px 36px);
 }
 
 .save__button {
@@ -295,17 +301,15 @@ dialog::backdrop {
   overflow: hidden;
 }
 
-/* Focus */
-.card__like-button:focus,
-.save__button:focus,
-.dialog__button-ok:focus {
-  outline: none;
-}
-
+/* Focus-visible */
 .card__like-button:focus-visible,
 .save__button:focus-visible,
 .dialog__button-ok:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--border-color, #000);
 }
 
 /* Hover */
