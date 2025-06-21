@@ -39,8 +39,10 @@
   /* palette */
   --background-color: #fff;
   --text-color: #000;
+  --accent-color: #000;
   --stroke-color: #fff;
   --border-color: #000;
+  --invert-color: #fff;
 
   /* box spacing */
   --border: 2px solid var(--border-color);
