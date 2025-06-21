@@ -48,9 +48,9 @@
   height: var(--floppy-size, 39px);
 }
 
-.heart {
-  width: 27px;
-  height: 24px;
+.heart-icon {
+  width: 39px;
+  height: 36px;
 }
 
 .content-section {
@@ -209,13 +209,18 @@
 .like__buttons {
   display: flex;
   align-self: flex-end;
-  gap: 6px;
+  gap: 4px;
+  height: 38px;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
-  padding: var(--button-heart-padding, 6px 4px 2px);
+  padding: 0;
   transition: border 0.3s ease;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
