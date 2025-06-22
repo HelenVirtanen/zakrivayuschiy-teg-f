@@ -10,6 +10,16 @@
 
 */
 
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -365,6 +375,7 @@ dialog::backdrop {
   transition-delay: 0.05s; /* delayed fill on hover */
 }
 
+/* Active */
 .card__icon-button:active .core {
   fill: var(--animation-fill-color, #f00);
   transition-delay: 0s;
@@ -389,6 +400,10 @@ dialog::backdrop {
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color, #f00);
   transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: grow 0.3s ease-in 0.1s;
 }
 
 /* Filters */
