@@ -10,6 +10,7 @@
 
 */
 
+/* Animations for button with heart icon */
 @keyframes grow {
   from {
     transform: scale(1);
@@ -17,6 +18,16 @@
 
   to {
     transform: scale(1.25);
+  }
+}
+
+@keyframes sparkle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -206,20 +217,20 @@
 }
 
 .button__text {
+  position: relative;
   margin: 0;
   padding: 0;
+  color: var(--invert-color, #fff);
   font-family: var(--accent-font, "PressStart2P");
   font-size: var(--button-font-size, 14px);
   line-height: 0.9;
-  color: var(--invert-color, #fff);
-  position: relative;
   mix-blend-mode: difference;
 }
 
 .like__buttons {
   display: flex;
-  align-self: flex-end;
   gap: 4px;
+  align-self: flex-end;
   height: 38px;
 }
 
@@ -247,7 +258,7 @@
 
 .contour {
   fill: var(--contour-fill-color, black);
-  transition: fill 0.3s linear;
+  transition: fill 0.1s linear; /* fast fill back after unlike */ 
 }
 
 .sparks {
@@ -272,8 +283,8 @@
 
 .save__button .floppy {
   --floppy-size: 28px;
-  mix-blend-mode: difference;
   filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 /* Dialog */
@@ -330,12 +341,11 @@ dialog::backdrop {
 
 /* Buttons states */
 
-/* Transitions */
 .card__like-button,
 .save__button,
 .dialog__button-ok {
-  transition: box-shadow 0.3s ease;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 /* Focus-visible */
@@ -353,15 +363,15 @@ dialog::backdrop {
 .card__like-button::before,
 .save__button::before,
 .dialog__button-ok::before {
+  content: "";
   position: absolute;
-  content: '';
   inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   background-color: var(--accent-color, #000);
-  transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
-  z-index: 0;
+  transform: translateX(-100%);
 }
 
 .card__like-button:hover::before,
@@ -372,7 +382,7 @@ dialog::backdrop {
 
 .card__icon-button:hover .core {
   fill: var(--contour-fill-color, black);
-  transition-delay: 0s; /* immediate fill on hover */ 
+  transition-delay: 0s; /* immediate fill on hover */
 }
 
 .card__icon-button:hover .main-body {
@@ -391,10 +401,10 @@ dialog::backdrop {
   transition-delay: 0.05s;
 }
 
+/* Liked (clicked) */ 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color, #f00);
   transition-delay: 0s;
-  
 }
 
 .like-icon.is-liked .main-body {
@@ -404,12 +414,17 @@ dialog::backdrop {
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color, #f00);
+  transition-duration: 0.3s;
   transition-delay: 0.06s;
 }
 
 .like-icon.is-liked .heart {
   animation: grow 0.3s ease-in 0.1s;
 }
+
+.like-icon.is-liked .sparks {
+  animation: sparkle 0.3s ease-in 0.3s;
+} 
 
 /* Filters */
 .contrast-filter {
