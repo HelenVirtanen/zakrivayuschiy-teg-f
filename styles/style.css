@@ -229,6 +229,10 @@
   transition: border 0.3s ease;
 }
 
+.heart {
+  transform-origin: center;
+}
+
 .core {
   fill: var(--icon-background-color, transparent);
   transition: fill 0.3s linear;
@@ -253,6 +257,7 @@
 .card__like-button {
   position: relative;
   padding: var(--button-like-padding, 6px 36px);
+  inline-size: 169px;
 }
 
 .save__button {
