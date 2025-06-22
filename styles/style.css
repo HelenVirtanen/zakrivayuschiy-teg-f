@@ -231,6 +231,11 @@
   transition-delay: 0s; /* immediate fill reset on hover out */
 }
 
+.contour {
+  fill: var(--contour-fill-color, black);
+  transition: fill 0.3s linear;
+}
+
 .sparks {
   opacity: 0;
 }
@@ -368,6 +373,22 @@ dialog::backdrop {
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color, #f00);
   transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color, #f00);
+  transition-delay: 0s;
+  
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color, #f00);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color, #f00);
+  transition-delay: 0.06s;
 }
 
 /* Filters */
