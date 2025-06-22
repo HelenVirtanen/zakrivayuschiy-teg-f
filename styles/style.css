@@ -360,6 +360,16 @@ dialog::backdrop {
   transition-delay: 0.05s; /* delayed fill on hover */
 }
 
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color, #f00);
+  transition-delay: 0s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color, #f00);
+  transition-delay: 0.05s;
+}
+
 /* Filters */
 .contrast-filter {
   filter: contrast(120%);
