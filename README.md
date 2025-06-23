@@ -1,6 +1,7 @@
 # Проект Закрывающий тег 🗻🧘
 
 [Ссылка на проект в GitHub](https://github.com/HelenVirtanen/zakrivayuschiy-teg-f)
+
 [Посмотреть на GitHub Pages](https://helenvirtanen.github.io/zakrivayuschiy-teg-f/)
 
 ## 📖 Описание проекта: 
