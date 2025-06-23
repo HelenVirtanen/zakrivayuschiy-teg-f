@@ -245,8 +245,8 @@
 
 .card__like-button {
   position: relative;
-  padding: var(--button-like-padding, 6px 36px);
-  inline-size: 169px;
+  padding: var(--button-like-padding, 6px 0);
+  inline-size: 130px;
 }
 
 .save__button {
