@@ -18,7 +18,7 @@
     1.4375rem
   );
   --accent-heading-transform: uppercase;
-  
+
   /* background image */
   --background-image: repeating-linear-gradient(
       90deg,
@@ -46,10 +46,11 @@
   --icon-background-color: transparent;
   --contour-fill-color: #000;
   --animation-fill-color: #ff0000;
-  --label-text-shadow: 1px 0 var(--stroke-color, #fff), -1px 0 var(--stroke-color, #fff),
-    0 1px var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff),
-    1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
-    1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
+  --label-text-shadow: 1px 0 var(--stroke-color, #fff),
+    -1px 0 var(--stroke-color, #fff), 0 1px var(--stroke-color, #fff),
+    0 -1px var(--stroke-color, #fff), 1px 1px var(--stroke-color, #fff),
+    -1px 1px var(--stroke-color, #fff), 1px -1px var(--stroke-color, #fff),
+    -1px -1px var(--stroke-color, #fff);
 
   /* box spacing */
   --border: 2px solid var(--border-color);
@@ -63,10 +64,10 @@
   --button-like-padding: 6px 0;
   --button-save-padding: 15px 20px;
   --button-ok-padding: 10.5px 112.5px;
-  
+
   --dialog-padding: 30px 40px;
-  
-  /* label position */ 
+
+  /* label position */
   --label-top: 25px;
   --label-right: 13px;
 
