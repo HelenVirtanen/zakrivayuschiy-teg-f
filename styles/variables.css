@@ -44,8 +44,12 @@
   --border-color: #000;
   --invert-color: #fff;
   --icon-background-color: transparent;
-  --contour-fill-color: black;
-  --animation-fill-color: #f00;
+  --contour-fill-color: #000;
+  --animation-fill-color: #ff0000;
+  --label-text-shadow: 1px 0 var(--stroke-color, #fff), -1px 0 var(--stroke-color, #fff),
+    0 1px var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff),
+    1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
+    1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
 
   /* box spacing */
   --border: 2px solid var(--border-color);

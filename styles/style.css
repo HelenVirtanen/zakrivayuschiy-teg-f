@@ -1,13 +1,9 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+/* Для корректной работы скриптов используются следующие названия классов:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 
 /* Animations for button with heart icon */
@@ -157,10 +153,17 @@
   font-family: var(--accent-font, "PressStart2P");
   font-size: var(--label-font-size, 14px);
   line-height: 1;
-  text-shadow: 1px 0 var(--stroke-color, #fff), -1px 0 var(--stroke-color, #fff),
-    0 1px var(--stroke-color, #fff), 0 -1px var(--stroke-color, #fff),
-    1px 1px var(--stroke-color, #fff), -1px 1px var(--stroke-color, #fff),
-    1px -1px var(--stroke-color, #fff), -1px -1px var(--stroke-color, #fff);
+  text-shadow: var(
+    --label-text-shadow,
+    1px 0 var(--stroke-color, #fff),
+    -1px 0 var(--stroke-color, #fff),
+    0 1px var(--stroke-color, #fff),
+    0 -1px var(--stroke-color, #fff),
+    1px 1px var(--stroke-color, #fff),
+    -1px 1px var(--stroke-color, #fff),
+    1px -1px var(--stroke-color, #fff),
+    -1px -1px var(--stroke-color, #fff)
+  );
   mix-blend-mode: hard-light;
 }
 
@@ -257,8 +260,8 @@
 }
 
 .contour {
-  fill: var(--contour-fill-color, black);
-  transition: fill 0.1s linear; /* fast fill back after unlike */ 
+  fill: var(--contour-fill-color, #000);
+  transition: fill 0.1s linear; /* fast fill back after unlike */
 }
 
 .sparks {
@@ -301,7 +304,7 @@
   max-inline-size: clamp(286px, calc(100vw - 34px), 353px);
 }
 
-.dialog-save[opened] {
+.dialog-save[open] {
   display: block;
 }
 
@@ -381,41 +384,41 @@ dialog::backdrop {
 }
 
 .card__icon-button:hover .core {
-  fill: var(--contour-fill-color, black);
+  fill: var(--contour-fill-color, #000);
   transition-delay: 0s; /* immediate fill on hover */
 }
 
 .card__icon-button:hover .main-body {
-  fill: var(--contour-fill-color, black);
+  fill: var(--contour-fill-color, #000);
   transition-delay: 0.05s; /* delayed fill on hover */
 }
 
 /* Active */
 .card__icon-button:active .core {
-  fill: var(--animation-fill-color, #f00);
+  fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0s;
 }
 
 .card__icon-button:active .main-body {
-  fill: var(--animation-fill-color, #f00);
+  fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0.05s;
 }
 
-/* Liked (clicked) */ 
+/* Liked (clicked) */
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color, #f00);
+  fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color, #f00);
+  fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color, #f00);
-  transition-duration: 0.3s;
+  fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0.06s;
+  transition-duration: 0.3s;
 }
 
 .like-icon.is-liked .heart {
@@ -424,7 +427,7 @@ dialog::backdrop {
 
 .like-icon.is-liked .sparks {
   animation: sparkle 0.3s ease-in 0.3s;
-} 
+}
 
 /* Filters */
 .contrast-filter {
