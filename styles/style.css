@@ -101,6 +101,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+  margin-block-end: 50px;
 }
 
 .cards-list__item {
@@ -182,11 +183,6 @@
   line-height: 1.17;
 }
 
-/* Footer */
-.footer {
-  padding: 50px 0 100px;
-}
-
 /* Buttons */
 .button {
   border: var(--border, 2px solid #000);
@@ -261,6 +257,7 @@
   gap: 8px;
   align-self: center;
   padding: var(--button-save-padding, 15px 20px);
+  margin-block-end: 100px;
 }
 
 .save__button .floppy {
