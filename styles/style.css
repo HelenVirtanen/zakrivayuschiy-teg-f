@@ -6,27 +6,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 */
 
-/* Animations for button with heart icon */
-@keyframes grow {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes sparkle {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .page {
   display: flex;
   flex-direction: column;
@@ -286,7 +265,7 @@
 
 .save__button .floppy {
   --floppy-size: 28px;
-  filter: invert(1);
+  filter: invert(1); /* or use fill color but need to change directive use to inline path in html*/
   mix-blend-mode: difference;
 }
 
@@ -419,14 +398,6 @@ dialog::backdrop {
   fill: var(--animation-fill-color, #ff0000);
   transition-delay: 0.06s;
   transition-duration: 0.3s;
-}
-
-.like-icon.is-liked .heart {
-  animation: grow 0.3s ease-in 0.1s;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparkle 0.3s ease-in 0.3s;
 }
 
 /* Filters */
