@@ -59,8 +59,8 @@
     </header>
 
     <!-- Cards list -->
-    <main>
-      <ul class="cards-list content-section">
+    <main class="content-section">
+      <ul class="cards-list">
         <!-- Card 1 - Preparation -->
         <li class="cards-list__item">
           <article class="card">
@@ -90,13 +90,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -164,13 +161,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -237,13 +231,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -312,13 +303,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -389,13 +377,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -460,13 +445,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -535,13 +517,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -613,13 +592,10 @@
                 </p>
               </div>
               <div class="like__buttons">
-                <button
-                  class="button card__icon-button"
-                  type="button"
-                  aria-hidden="true"
-                >
+                <button class="button card__icon-button" type="button">
                   <svg
                     class="like-icon heart-icon"
+                    aria-hidden="true"
                     viewBox="0 0 39 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -659,24 +635,22 @@
           </article>
         </li>
       </ul>
-      <section class="content-section">
-        <button
-          class="button save__button button--textual"
-          type="button"
-          onclick="window['dialog-id'].showModal();"
-          aria-controls="dialog-id"
-          aria-label="Сохранить"
+      <button
+        class="button save__button button--textual"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+        aria-label="Сохранить"
+      >
+        <svg
+          class="floppy"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 39 39"
         >
-          <svg
-            class="floppy"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 39 39"
-          >
-            <use href="./svg/floppy.svg#save" />
-          </svg>
-          <span class="button__text">Сохранить на память</span>
-        </button>
-      </section>
+          <use href="./svg/floppy.svg#save" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
       <dialog id="dialog-id" class="dialog-save">
         <div class="dialog__header">
           <svg

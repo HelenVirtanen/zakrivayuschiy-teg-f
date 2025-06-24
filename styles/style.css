@@ -256,13 +256,15 @@
   align-items: center;
   gap: 8px;
   align-self: center;
-  padding: var(--button-save-padding, 15px 20px);
   margin-block-end: 100px;
+  padding: var(--button-save-padding, 15px 20px);
 }
 
 .save__button .floppy {
   --floppy-size: 28px;
-  filter: invert(1); /* or use fill color but need to change directive use to inline path in html*/
+  filter: invert(
+    1
+  ); /* or use fill color but need to change directive use to inline path in html*/
   mix-blend-mode: difference;
 }
 
@@ -320,17 +322,13 @@ dialog::backdrop {
 
 /* Buttons states */
 
-.card__like-button,
-.save__button,
-.dialog__button-ok {
+.button--textual {
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
 /* Focus-visible */
-.card__like-button:focus-visible,
-.save__button:focus-visible,
-.dialog__button-ok:focus-visible {
+.button--textual:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
@@ -339,9 +337,7 @@ dialog::backdrop {
 }
 
 /* Hover */
-.card__like-button::before,
-.save__button::before,
-.dialog__button-ok::before {
+.button--textual::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -353,9 +349,7 @@ dialog::backdrop {
   transform: translateX(-100%);
 }
 
-.card__like-button:hover::before,
-.save__button:hover::before,
-.dialog__button-ok:hover::before {
+.button--textual:hover::before {
   transform: translateX(0);
 }
 
