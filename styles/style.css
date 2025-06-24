@@ -49,7 +49,7 @@
   height: 36px;
 }
 
-.content-section {
+.container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
