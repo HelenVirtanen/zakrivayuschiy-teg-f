@@ -258,13 +258,12 @@
   align-self: center;
   margin-block-end: 100px;
   padding: var(--button-save-padding, 15px 20px);
+  background-color: #fff;
+  color: #fff;
 }
 
 .save__button .floppy {
   --floppy-size: 28px;
-  filter: invert(
-    1
-  ); /* or use fill color but need to change directive use to inline path in html*/
   mix-blend-mode: difference;
 }
 
